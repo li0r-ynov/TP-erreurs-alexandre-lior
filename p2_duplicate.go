@@ -16,18 +16,6 @@ func DuplicateV1(pile []int) (int, error) {
     return -1, nil
 }
 
-func DuplicateV2(pile []int) int {
-	maps := make(map[int]int)
-	result := 0
-	for i := 0; i < len(pile); i++ {
-		maps[pile[i]] += 1
-		if maps[pile[i]] == 2 {
-			result = pile[i]
-			break
-		}
-	}
-	return result
-}
 
 /* package main
 
