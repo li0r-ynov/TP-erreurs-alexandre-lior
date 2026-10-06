@@ -18,7 +18,7 @@ func TestSmallestTableDriven(t *testing.T) {
 		{name: "SingleElement", input: []int{7}, want: 7},
 		{name: "DuplicateMinimum", input: []int{4, 2, 2, 9}, want: 2},
 		{name: "ReverseSortedInput", input: []int{3, 2, 1}, want: 1},
-		{name: "NegativeValues", input: []int{-5, 3, -12}, want: -2},
+		{name: "NegativeValues", input: []int{-5, 3, -12}, want: -12},
 		{name: "EmptyInput", input: []int{}, want: -1, wantErr: ErrEmptyPile},
 		{name: "NilInput", input: nil, want: -1, wantErr: ErrEmptyPile},
 	}
