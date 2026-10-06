@@ -1,4 +1,4 @@
-package main
+package kaplas
 
 import "math/rand"
 
