@@ -1,16 +1,16 @@
 package main
 
-func DuplicateV1(pile []int) int {
+func DuplicateV1(pile []int) (int,error) {
 
 	mapbool := make(map[int]bool)
 
 	for _, nom := range pile {
 		if mapbool[nom] {
-			return nom
+			return nom,nil
 		}
 		mapbool[nom] = true
 	}
-	return 0
+	return 0,nil
 }
 
 func DuplicateV2(pile []int) int {
