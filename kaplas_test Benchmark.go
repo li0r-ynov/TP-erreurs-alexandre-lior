@@ -11,7 +11,7 @@ func BenchmarkSmallestV1(b *testing.B) {
 		pile := Shuffled(n) // préparation hors de la mesure
 		b.Run(fmt.Sprintf("V1/n=%d", n), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
-				sink = SmallestV1(pile)
+				sink, _ = SmallestV1(pile)
 			}
 		})
 	}
@@ -102,7 +102,7 @@ func BenchmarkFirstUniqueV1(b *testing.B) {
 func BenchmarkTwoSumV1(b *testing.B) {
 	for _, n := range []int{1_000, 10_000, 100_000} {
 		ligne := Shuffled(n)
-		cible := 3*n
+		cible := 3 * n
 		b.Run(fmt.Sprintf("V1/n=%d", n), func(b *testing.B) {
 			for i := 0; i < b.N; i++ {
 				resultat, _, _ := TwoSumV1(ligne, cible)
@@ -111,4 +111,3 @@ func BenchmarkTwoSumV1(b *testing.B) {
 		})
 	}
 }
-

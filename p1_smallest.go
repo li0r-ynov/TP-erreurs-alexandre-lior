@@ -1,8 +1,8 @@
 package main
 
-func SmallestV1(pile []int) int {
+func SmallestV1(pile []int) (int, error) {
 	if len(pile) == 0 {
-		return 0
+		return -1, ErrEmptyPile
 	}
 
 	min := pile[0]
@@ -11,7 +11,7 @@ func SmallestV1(pile []int) int {
 			min = pile[i]
 		}
 	}
-	return min
+	return min, nil
 }
 
 func SmallestV2(pile []int) int {
